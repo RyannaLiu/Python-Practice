@@ -1,0 +1,13 @@
+#4. Median of Two Sorted Arrays
+    def findMedianSortedArrays(nums1, nums2):
+    
+        comb_lst=nums1+nums2
+        print(comb_lst)
+        comb_lst.sort()
+        if len(comb_lst)%2==0:
+            median=(comb_lst[len(comb_lst)//2]+comb_lst[len(comb_lst)//2-1])/2
+
+        if len(comb_lst)%2==1:
+            median=comb_lst[len(comb_lst)//2]
+            print(2)
+        return median
