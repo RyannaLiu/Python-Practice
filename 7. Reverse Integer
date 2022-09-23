@@ -1,0 +1,22 @@
+#7. Reverse Integer
+class Solution:
+    def reverse(self, x: int) -> int:
+        
+        x=str(x)
+        i=len(x)-1
+        
+        if x[0] != '-':
+            x_r=''
+            while i>=0:
+                x_r+=x[i]
+                i-=1
+        else:
+            x_r='-'
+            while i>0:
+                x_r+=x[i]
+                i-=1
+        
+        x_r=int(x_r)
+        if x_r >2**(31)-1 or x_r<-2**(31):
+            x_r=0
+        return x_r  
