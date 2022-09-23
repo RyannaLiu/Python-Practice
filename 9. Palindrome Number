@@ -1,0 +1,12 @@
+# 9. Palindrome Number
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        x=str(x)
+        i=len(x)-1
+        
+        x_r=''
+        while i>=0:
+            x_r+=x[i]
+            i-=1
+
+        return x_r==x 
